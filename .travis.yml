@@ -8,8 +8,10 @@ julia:
   - nightly
 notifications:
   email: false
+before_install:
+  - pip install --user moto
 before_script:
-  - pip install moto
+  - export PATH=$HOME/.local/bin:$PATH
 # uncomment the following lines to override the default test script
 #script:
 #  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
