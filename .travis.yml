@@ -9,6 +9,7 @@ julia:
 notifications:
   email: false
 before_install:
+  - export PYTHONUSERBASE=$HOME/.local
   - pip install --user moto
 before_script:
   - export PATH=$PATH:$HOME/.local/bin
