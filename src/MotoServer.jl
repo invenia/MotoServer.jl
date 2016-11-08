@@ -43,6 +43,19 @@ function MockAWSServer(;
     return m
 end
 
+function MockAWSServer(f::Function, args...; kwargs...)
+    m = MockAWSServer(args...; kwargs...)
+
+    local ret
+    try
+        ret = f(m)
+    finally
+        kill(m)
+    end
+
+    return ret
+end
+
 function Base.kill(m::MockAWSServer)
     if process_running(m.proc) && !process_exited(m.proc)
         close(m.perr)
