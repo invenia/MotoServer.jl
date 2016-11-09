@@ -7,8 +7,7 @@ Mock AWS services with `moto_server`
 
 ## Requirements
 
-MotoServer.jl requires the Python package `moto`, which can be installed with `pip`.
-Future versions may require users to install `moto[server]` with `pip`.
+MotoServer.jl requires the Python package `moto[server]`, which can be installed with `pip` (prior to the `moto[server]` extra being added, the server was available in the `moto` package).
 
 The `moto_server` executable must be accessible on the `PATH` (this should happen by default when it is installed).
 

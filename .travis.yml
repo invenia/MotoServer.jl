@@ -10,7 +10,7 @@ notifications:
   email: false
 before_install:
   - export PYTHONUSERBASE=$HOME/.local
-  - pip install --user moto
+  - pip install --user moto[server]
 before_script:
   - export PATH=$PATH:$HOME/.local/bin
   - echo $PATH
