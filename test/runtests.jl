@@ -11,7 +11,7 @@ const S3_TEST_URL = "s3.amazonaws.com"
 
 # need to sleep to give the Process instance time to realize that the process
 # has been killed (the process will be killed either way)
-const SLEEP_TIME = 0.1
+const SLEEP_TIME = 0.3
 
 function curl_silencer(curlbuf::Ptr{Void}, s::Csize_t, n::Csize_t, p_ctxt::Ptr{Void})
     sz = s * n
